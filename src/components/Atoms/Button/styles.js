@@ -1,10 +1,14 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 const getVariantButton = ({ isRed = false }) => (isRed ? 'primary' : 'default')
 
 const getSize = ({ bigSize = false }) => (bigSize ? '18px' : '16px')
 
-export const Btn = styled.button`
+export const Btn = styled(motion.button)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid
     ${({ borderColor }) => (borderColor ? borderColor : 'transparent')};
   background-color: var(--bg-button-color-${getVariantButton});
