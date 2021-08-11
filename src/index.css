@@ -1,5 +1,31 @@
+:root {
+  --bg-layout-color: #fff;
+  --border-layout-color: #000;
+
+  --text-normal-color: #000;
+  --text-button-primary-color: #ffffff;
+  --text-button-default-color: #515a5a;
+
+  /* buttons */
+  --bg-button-color-primary: #ac1e2c;
+  --bg-button-hover-color-primary: #a00e1c;
+  --bg-button-color-default: #ffffff;
+  --bg-button-hover-color-default: #f2f2f2;
+  --border-button-color-default: #7d7d7d;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +33,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a,
+button,
+label,
+input,
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Raleway', Arial, Helvetica, Arial, Verdana, sans-serif;
+}
+
+#root,
+.App {
+  height: 100vh;
 }
