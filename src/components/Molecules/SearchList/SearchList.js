@@ -18,7 +18,7 @@ const searchEats = [
   { Icon: FaChartPie, title: 'Servicios empresariales' },
 ]
 
-export const SearchList = () => {
+export const SearchList = ({ styleBtn }) => {
   const navigation = useHistory()
 
   const handleNavigation = () => navigation.push('/details')
@@ -28,7 +28,7 @@ export const SearchList = () => {
       {searchEats.map((el, i) => (
         <li key={i}>
           <Button
-            style={{ justifyContent: 'flex-start' }}
+            style={{ justifyContent: 'flex-start', ...styleBtn }}
             onClick={handleNavigation}
           >
             <el.Icon size={20} style={{ marginRight: 10 }} />
