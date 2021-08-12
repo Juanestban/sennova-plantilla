@@ -25,7 +25,7 @@ export const SearchBar = () => {
           </div>
         )}
       </div>
-      <div className="county-input">
+      <div className="country-input">
         <button onClick={() => handleClick(1)}>
           <p>
             <b>Ciudades:</b> Neiva, Pitalito, Garzón
@@ -37,8 +37,8 @@ export const SearchBar = () => {
           </div>
         )}
       </div>
-      <Button isRed bigSize borderRadius="6px">
-        <FaSearch color="white" size={20} />
+      <Button isRed borderRadius="6px" p="0 15px">
+        <FaSearch color="white" size={15} />
       </Button>
     </Container>
   )

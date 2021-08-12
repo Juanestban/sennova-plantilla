@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router-dom'
 import {
   FaHamburger,
   FaCut,
@@ -18,11 +19,18 @@ const searchEats = [
 ]
 
 export const SearchList = () => {
+  const navigation = useHistory()
+
+  const handleNavigation = () => navigation.push('/details')
+
   return (
     <ul>
       {searchEats.map((el, i) => (
         <li key={i}>
-          <Button style={{ justifyContent: 'flex-start' }}>
+          <Button
+            style={{ justifyContent: 'flex-start' }}
+            onClick={handleNavigation}
+          >
             <el.Icon size={20} style={{ marginRight: 10 }} />
             {el.title}
           </Button>
