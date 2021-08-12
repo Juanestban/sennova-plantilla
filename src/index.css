@@ -17,6 +17,9 @@
 
   /* footer */
   --bg-footer-color: #42aad7;
+
+  /* Details */
+  --title-color-default: #333333;
 }
 
 *::before,
