@@ -6,6 +6,7 @@ import ButtonScroll from './components/Molecules/ButtonScroll'
 import './App.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Footer from './components/Organisms/Footer'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" component={Home} />
           </Switch>
         </Router>
+        <Footer />
       </HelmetProvider>
       <ButtonScroll />
     </div>

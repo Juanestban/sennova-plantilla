@@ -14,6 +14,9 @@
   --border-button-color-default: #7d7d7d;
 
   --bg-slide-color: rgba(0, 0, 0, 0.342);
+
+  /* footer */
+  --bg-footer-color: #42aad7;
 }
 
 *::before,
