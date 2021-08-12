@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa'
-import { Container, ButtonAnimate as Button } from './styles'
+import { Container, ButtonAnimate as Button, Circle } from './styles'
 import Slide1 from '../../../assets/img/slide-show-1.jpg'
 import Slide2 from '../../../assets/img/slide-show-2.jpg'
 import Slide3 from '../../../assets/img/slide-show-3.jpg'
@@ -16,13 +16,26 @@ export const SlideShow = ({ children }) => {
 
   const imageIndex = wrap(0, slides.length, page)
 
-  const paginate = (newDirection) => {
-    setPage([page + newDirection, newDirection])
-  }
+  const paginate = useCallback(
+    (newDirection) => setPage([page + newDirection, newDirection]),
+    [page]
+  )
+
+  const paginateToId = (imgId, newDirection) => setPage([imgId, newDirection])
+
+  useEffect(() => {
+    const timeoutTransition = setTimeout(() => {
+      paginate(1)
+    }, 3500)
+
+    return () => {
+      clearTimeout(timeoutTransition)
+    }
+  }, [paginate])
 
   return (
     <Container>
-      <>
+      <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             className="img-contained"
@@ -47,7 +60,7 @@ export const SlideShow = ({ children }) => {
             <Button
               whileHover={whileHover}
               whileTap={whileTap}
-              onClick={() => paginate(1)}
+              onClick={() => paginate(-1)}
             >
               <FaAngleLeft size={50} color="gray" />
             </Button>
@@ -56,13 +69,22 @@ export const SlideShow = ({ children }) => {
             <Button
               whileHover={whileHover}
               whileTap={whileTap}
-              onClick={() => paginate(-1)}
+              onClick={() => paginate(1)}
             >
               <FaAngleRight size={50} color="gray" />
             </Button>
           </div>
         </div>
-      </>
+        <div className="circles-container">
+          {slides.map((_, i) => (
+            <Circle
+              key={i}
+              isActive={i === imageIndex}
+              onClick={() => paginateToId(i, 1)}
+            />
+          ))}
+        </div>
+      </div>
     </Container>
   )
 }
