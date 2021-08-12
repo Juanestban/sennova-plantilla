@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 100%;
   height: calc(80vh - 20px);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   & .img-contained {
     width: 100%;
