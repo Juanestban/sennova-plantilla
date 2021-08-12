@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router-dom'
 import Button from '../../Atoms/Button'
 import Face from '../../../assets/icons/facebook.svg'
 import Instagram from '../../../assets/icons/instagram.svg'
@@ -23,6 +24,10 @@ export const CardDetails = ({
   phone = '',
   children,
 }) => {
+  const navigation = useHistory()
+
+  const handleNavigation = () => navigation.push('/details/locals/120')
+
   return (
     <ContainerCard>
       <div className="card-image">
@@ -47,6 +52,7 @@ export const CardDetails = ({
               bigSize
               m="0 10px 0 0"
               borderColor="var(--border-button-color-default)"
+              onClick={handleNavigation}
             >
               Acceder
             </Button>

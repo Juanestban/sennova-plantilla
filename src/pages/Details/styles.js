@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const DetailsContainer = styled.div`
   display: flex;
   width: auto;
-  height: 80vh;
+  height: 90vh;
   margin: 10px 0 0 0;
   margin-right: 0;
   color: var(--text-button-default-color);
@@ -21,13 +21,42 @@ export const DetailsContainer = styled.div`
 export const FiltersContainer = styled.div`
   width: 20vw;
   padding: 0 40px;
+  position: relative;
+
   & h2 {
     text-align: center;
+  }
+
+  & .content-all {
+    position: relative;
+
+    & h3 {
+      padding-top: 10px;
+    }
+
+    & button {
+      text-align: initial;
+    }
+  }
+
+  & .sugeridos::after,
+  .distancia::after {
+    content: '';
+    display: block;
+    width: 100%;
+    box-shadow: 0px 0px 100px 12px rgba(0, 0, 0, 0.29);
+    height: 1px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: gray;
   }
 `
 
 export const CardsDetailsContainer = styled.div`
   width: 60vw;
+  overflow-y: scroll;
+  padding-bottom: 20px;
 `
 
 export const CardsContainer = styled.div`
@@ -37,7 +66,7 @@ export const CardsContainer = styled.div`
 
 export const MapContainer = styled.figure`
   width: 20vw;
-  height: 80vh;
+  height: 90vh;
   margin: 0;
 `
 

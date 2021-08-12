@@ -41,28 +41,36 @@ export const Details = () => {
       <DetailsContainer>
         <FiltersContainer>
           <h2>Filtros</h2>
-          <div className="sugeridos">
-            <h3>Sugeridos</h3>
-            <div>
-              <input type="radio" />
-              <label for="">Abierto ahora 21:23</label>
+          <div className="content-all">
+            <div className="sugeridos">
+              <h3>Sugeridos</h3>
+              <div>
+                <input type="radio" />
+                <label htmlFor="">Abierto ahora 21:23</label>
+              </div>
             </div>
           </div>
-          <h3>Categorías</h3>
-          <SearchList styleBtn={{ fontSize: '14px' }} />
-          <div className="distancia">
-            <h3>Distancia</h3>
-            <div>
-              <input type="radio" />
-              <label for="">1 km</label>
+          <div className="content-all">
+            <div className="sugeridos">
+              <h3>Categorías</h3>
+              <SearchList styleBtn={{ fontSize: '14px' }} />
             </div>
-            <div>
-              <input type="radio" />
-              <label for="">2 km</label>
-            </div>
-            <div>
-              <input type="radio" />
-              <label for="">4 km</label>
+          </div>
+          <div className="content-all">
+            <div className="distancia">
+              <h3>Distancia</h3>
+              <div>
+                <input type="radio" />
+                <label htmlFor="">1 km</label>
+              </div>
+              <div>
+                <input type="radio" />
+                <label htmlFor="">2 km</label>
+              </div>
+              <div>
+                <input type="radio" />
+                <label htmlFor="">4 km</label>
+              </div>
             </div>
           </div>
         </FiltersContainer>
