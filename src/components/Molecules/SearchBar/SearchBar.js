@@ -5,14 +5,14 @@ import SearchList from '../SearchList'
 import CountryList from '../CountyList'
 import { Container } from './styles'
 
-export const SearchBar = () => {
+export const SearchBar = ({ borderColor }) => {
   const [visible, setVisible] = useState([false, false])
 
   const handleClick = (id) =>
     setVisible(visible.map((val, i) => (i === id ? !val : val)))
 
   return (
-    <Container>
+    <Container borderColor={borderColor}>
       <div className="search-input">
         <button onClick={() => handleClick(0)}>
           <p>
@@ -37,7 +37,7 @@ export const SearchBar = () => {
           </div>
         )}
       </div>
-      <Button isRed borderRadius="6px" p="0 15px">
+      <Button isRed borderRadius="5px" p="0 15px">
         <FaSearch color="white" size={15} />
       </Button>
     </Container>

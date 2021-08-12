@@ -37,7 +37,9 @@ export const Navigation = () => {
           </Link>
         </Figure>
       </div>
-      <div className="search-header">{pathname !== '/' && <SearchBar />}</div>
+      <div className="search-header">
+        {pathname !== '/' && <SearchBar borderColor="gray" />}
+      </div>
       <nav>
         <ul>
           <li>
