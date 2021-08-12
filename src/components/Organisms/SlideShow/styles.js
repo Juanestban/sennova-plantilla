@@ -33,6 +33,11 @@ export const Container = styled.div`
     align-items: center;
     position: absolute;
     top: 50%;
+    z-index: 100;
+
+    & .container-search-into {
+      width: 80%;
+    }
   }
 
   & .circles-container {

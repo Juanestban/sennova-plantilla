@@ -8,8 +8,14 @@ export const Header = styled.header`
   background-color: var(--bg-layout-color);
 
   &.title-header,
+  .search-header,
   nav {
-    width: 50%;
+    width: calc(100% / 3);
+  }
+
+  & .search-header {
+    width: 100%;
+    padding-right: 20px;
   }
 
   & nav ul {
@@ -25,6 +31,7 @@ export const Figure = styled.figure`
   width: auto;
   height: 20vh;
   margin: 10px 20px;
+  margin-right: 0;
   align-items: center;
 
   &img {

@@ -51,7 +51,9 @@ export const SlideShow = ({ children }) => {
             duration: 0.5,
           }}
         />
-        <div className="container-search">{children}</div>
+        <div className="container-search">
+          <div className="container-search-into">{children}</div>
+        </div>
         <div className="container-float">
           <div className="contain-btn">
             <Button

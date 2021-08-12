@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
-import Home from './pages/Home'
+import HomePage from './pages/Home'
+import DetailsPage from './pages/Details'
 import Navigation from './components/Organisms/Navigation'
 import ButtonScroll from './components/Molecules/ButtonScroll'
 import './App.css'
@@ -15,10 +16,11 @@ function App() {
         <Helmet>
           <title>Director</title>
         </Helmet>
-        <Navigation />
         <Router>
+          <Navigation />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/details" component={DetailsPage} />
           </Switch>
         </Router>
         <Footer />
