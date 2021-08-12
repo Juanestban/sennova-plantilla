@@ -24,18 +24,18 @@ export const SlideShow = ({ children }) => {
   const paginateToId = (imgId, newDirection) => setPage([imgId, newDirection])
 
   useEffect(() => {
-    // const timeoutTransition = setTimeout(() => {
-    //   paginate(1)
-    // }, 3500)
+    const timeoutTransition = setTimeout(() => {
+      paginate(1)
+    }, 3500)
 
     return () => {
-      // clearTimeout(timeoutTransition)
+      clearTimeout(timeoutTransition)
     }
   }, [paginate])
 
   return (
     <Container>
-      <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
+      <div style={{ position: 'relative', height: '100%' }}>
         <motion.div
           className="img-contained"
           key={page}

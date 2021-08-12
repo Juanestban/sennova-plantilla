@@ -3,6 +3,7 @@ import Button from '../../Atoms/Button'
 import Logo from '../../../assets/img/logosennova.PNG'
 import { Header, Figure } from './stlyes'
 import Portal from '../Portal'
+import LoginForm from '../LoginForm'
 
 export const Navigation = () => {
   const [isVisible, setIsVisible] = useState([false, false])
@@ -45,7 +46,9 @@ export const Navigation = () => {
         isVisible={isVisible[0]}
         sizeModal="30%"
         onClose={handleClose}
-      />
+      >
+        <LoginForm />
+      </Portal>
       <Portal
         titleModal="Registrarse"
         isVisible={isVisible[1]}
