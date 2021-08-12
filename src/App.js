@@ -1,11 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
-
-// pages - components
 import Home from './pages/Home'
 import Navigation from './components/Organisms/Navigation'
-
-// style
+import ButtonScroll from './components/Molecules/ButtonScroll'
 import './App.css'
 
 function App() {
@@ -22,6 +19,7 @@ function App() {
           </Switch>
         </Router>
       </HelmetProvider>
+      <ButtonScroll />
     </div>
   )
 }

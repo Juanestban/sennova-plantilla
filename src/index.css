@@ -45,8 +45,3 @@ h3,
 h4 {
   font-family: 'Raleway', Arial, Helvetica, Arial, Verdana, sans-serif;
 }
-
-#root,
-.App {
-  height: 100vh;
-}
