@@ -1,5 +1,6 @@
 import SlideShow from '../../components/Organisms/SlideShow'
 import SearchBar from '../../components/Molecules/SearchBar'
+import Card from '../../components/Molecules/Card'
 
 const Home = () => {
   return (
@@ -7,8 +8,8 @@ const Home = () => {
       <SlideShow>
         <SearchBar />
       </SlideShow>
-      <h1>Page Principal</h1>
-      <p>Home</p>
+      <Card title="empresas"></Card>
+      <Card title="huila"></Card>
     </>
   )
 }

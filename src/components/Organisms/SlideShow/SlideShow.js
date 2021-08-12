@@ -24,36 +24,33 @@ export const SlideShow = ({ children }) => {
   const paginateToId = (imgId, newDirection) => setPage([imgId, newDirection])
 
   useEffect(() => {
-    const timeoutTransition = setTimeout(() => {
-      paginate(1)
-    }, 3500)
+    // const timeoutTransition = setTimeout(() => {
+    //   paginate(1)
+    // }, 3500)
 
     return () => {
-      clearTimeout(timeoutTransition)
+      // clearTimeout(timeoutTransition)
     }
   }, [paginate])
 
   return (
     <Container>
       <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            className="img-contained"
-            key={page}
-            style={{ backgroundImage: `url(${slides[imageIndex]})` }}
-            custom={direction}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              x: { type: 'spring', stiffness: 300, damping: 300 },
-              opacity: { duration: 0.5 },
-            }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
-          />
-        </AnimatePresence>
+        <motion.div
+          className="img-contained"
+          key={page}
+          style={{ backgroundImage: `url(${slides[imageIndex]})` }}
+          custom={direction}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            type: 'just',
+            stiffness: 0.5,
+            damping: 0.5,
+            duration: 0.5,
+          }}
+        />
         <div className="container-search">{children}</div>
         <div className="container-float">
           <div className="contain-btn">
