@@ -24,6 +24,10 @@ export const Container = styled.div`
     padding: 0 20px;
     position: absolute;
     top: 50%;
+
+    & .contain-btn {
+      z-index: 151;
+    }
   }
 
   & .container-search {
