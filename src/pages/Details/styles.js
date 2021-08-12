@@ -7,6 +7,8 @@ export const DetailsContainer = styled.div`
   margin: 10px 0 0 0;
   margin-right: 0;
   color: var(--text-button-default-color);
+  /* border-top: 3px solid black; */
+  box-shadow: inset 0px 5px 10px -6px #ccc6bd;
 
   & h2 {
     color: var(--title-color-default);
