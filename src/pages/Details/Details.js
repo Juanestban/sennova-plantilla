@@ -43,16 +43,38 @@ export const Details = () => {
           <h2>Filtros</h2>
           <div className="sugeridos">
             <h3>Sugeridos</h3>
+            <div>
+              <input type="radio" />
+              <label for="">Abierto ahora 21:23</label>
+            </div>
           </div>
+          <h3>Categorías</h3>
           <SearchList styleBtn={{ fontSize: '14px' }} />
           <div className="distancia">
             <h3>Distancia</h3>
+            <div>
+              <input type="radio" />
+              <label for="">1 km</label>
+            </div>
+            <div>
+              <input type="radio" />
+              <label for="">2 km</label>
+            </div>
+            <div>
+              <input type="radio" />
+              <label for="">4 km</label>
+            </div>
           </div>
         </FiltersContainer>
         <CardsDetailsContainer>
           <CardsContainerHeader>
             <h2>Navegando por las empresas de Pitalito</h2>
-            <p>Ordenar </p>
+            <div className="order">
+              <p>Ordenar: </p>
+              <select name="select">
+                <option value="value1"> Recomendadas</option>
+              </select>
+            </div>
           </CardsContainerHeader>
           <CardsContainer>
             {cardDetails.map((card) => (
@@ -63,6 +85,7 @@ export const Details = () => {
                 location={card.location}
                 text={card.text}
                 img={card.img}
+                phone={card.phone}
               />
             ))}
           </CardsContainer>

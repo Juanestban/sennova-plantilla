@@ -6,9 +6,14 @@ export const DetailsContainer = styled.div`
   height: 80vh;
   margin: 10px 0 0 0;
   margin-right: 0;
+  color: var(--text-button-default-color);
 
   & h2 {
     color: var(--title-color-default);
+  }
+
+  & label {
+    font-size: 0.8rem;
   }
 `
 export const FiltersContainer = styled.div`
@@ -36,6 +41,23 @@ export const MapContainer = styled.figure`
 
 export const CardsContainerHeader = styled.div`
   display: flex;
-  text-align: center;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+
+  color: var(--text-button-default-color);
+  & p {
+    margin: 0;
+    padding: 0 0 0 8px;
+  }
+
+  & select {
+    border: none;
+    color: var(--text-button-default-color);
+  }
+
+  .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
