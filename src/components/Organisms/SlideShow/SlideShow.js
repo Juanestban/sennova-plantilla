@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa'
 import { Container, ButtonAnimate as Button, Circle } from './styles'

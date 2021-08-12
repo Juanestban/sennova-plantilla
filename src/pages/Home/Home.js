@@ -1,6 +1,7 @@
 import SlideShow from '../../components/Organisms/SlideShow'
 import SearchBar from '../../components/Molecules/SearchBar'
 import Card from '../../components/Molecules/Card'
+import CardEmploye from '../../components/Organisms/CardEmploye'
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       <SlideShow>
         <SearchBar />
       </SlideShow>
-      <Card title="empresas"></Card>
+      <CardEmploye />
       <Card title="huila"></Card>
     </>
   )

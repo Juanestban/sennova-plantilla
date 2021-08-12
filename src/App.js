@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import Navigation from './components/Organisms/Navigation'
 import ButtonScroll from './components/Molecules/ButtonScroll'
 import './App.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 function App() {
   return (
